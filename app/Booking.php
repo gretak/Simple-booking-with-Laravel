@@ -20,4 +20,10 @@ class Booking extends Model
     {
       return static::where('treatment','haircut')->get();
     }
+
+    public static function islatest()
+    {
+      return static::orderBy('created_at','desc')->take(1)->get();
+
+    }
 }

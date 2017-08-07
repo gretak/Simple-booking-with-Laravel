@@ -57,7 +57,9 @@ class BookingController extends Controller
 
         public function thankyou () 
         {
-         return 'thank you for your booking';
+         $latestbookings = Booking::islatest();
+
+         return view('thankyou', compact('latestbookings'));
         }
 
 

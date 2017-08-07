@@ -9,6 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="../../favicon.ico">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
   <title>Booking system template</title>
 
@@ -26,5 +27,20 @@
   @yield ('content')
 
   </div><!-- /.container -->
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker({
+     minDate: 1,
+     maxDate: "+3M +10D",
+     altField: "#datepicker",
+     altFormat: "d MM, yy",
+     beforeShowDay: $.datepicker.noWeekends
+    });
+  });
+  </script>
+
 </body>
 </html>

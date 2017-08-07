@@ -22,12 +22,16 @@
           <option>9:00</option>
           <option>10:00</option>
           <option>11:00</option>
+          <option>12:00</option>
+          <option>13:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+
       </select>
-      <select class="form-control" name="date">
-          <option>24 Jan</option>
-          <option>25 Jan</option>
-          <option>26 Jan</option>
-      </select>
+      <input type="text" id="datepicker" name="date"></input>
+
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
 </div>

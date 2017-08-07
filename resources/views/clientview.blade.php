@@ -30,8 +30,8 @@
           <option>17:00</option>
 
       </select>
-      <input type="text" id="datepicker" name="date"></input>
-
+    
+    <input type="text" id="datepicker" name="date"></input>
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
 </div>

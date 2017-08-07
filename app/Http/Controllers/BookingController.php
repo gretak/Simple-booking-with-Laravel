@@ -62,5 +62,12 @@ class BookingController extends Controller
          return view('thankyou', compact('latestbookings'));
         }
 
+         public function deletelatest() 
+         {
+          $deletelatest = Booking::deletelatest();
+
+          return "<h1>your booking is canceled</h1>";
+         }
+
 
 }

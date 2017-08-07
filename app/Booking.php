@@ -24,6 +24,11 @@ class Booking extends Model
     public static function islatest()
     {
       return static::orderBy('created_at','desc')->take(1)->get();
+    }
 
+    public static function deletelatest()
+    {
+      //return DB::table('bookings')->orderBy('created_at','desc')->take(1)->delete();
+      return static::orderBy('created_at','desc')->take(1)->delete();
     }
 }

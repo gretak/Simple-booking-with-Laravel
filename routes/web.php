@@ -6,3 +6,4 @@ Route::get('/client','BookingController@client');
 Route::get('/thankyou','BookingController@thankyou');
 
 Route::post('/bookings','BookingController@show');
+Route::delete('/thankyou', 'BookingController@deletelatest');

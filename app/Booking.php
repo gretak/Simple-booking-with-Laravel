@@ -8,17 +8,25 @@ class Booking extends Model
 {//custom functions to pass to the view
     public static function ismanicure()
     {
-      return static::where('treatment','manicure')->get();
+      return static::where('treatment','manicure')
+      ->orderBy('date', 'asc')
+      ->get();
     }
 
     public static function ispedicure()
     {
-      return static::where('treatment','pedicure')->get();
+      //return static::where('treatment','pedicure')->get();
+      return static::where('treatment','pedicure')
+      ->orderBy('date', 'asc')
+      ->get();
+
     }
 
     public static function ishaircut()
     {
-      return static::where('treatment','haircut')->get();
+      return static::where('treatment','haircut')
+      ->orderBy('date', 'asc')
+      ->get();
     }
 
     public static function islatest()
@@ -28,7 +36,6 @@ class Booking extends Model
 
     public static function deletelatest()
     {
-      //return DB::table('bookings')->orderBy('created_at','desc')->take(1)->delete();
       return static::orderBy('created_at','desc')->take(1)->delete();
     }
 }

@@ -19,8 +19,19 @@ class BookingController extends Controller
 
         public function company() 
         {
+
+        //return \DB::table('bookings')
+        //->where('treatment','pedicure')
+      //->join('treatment','date', '=', 'treatment.date')
+      //->orderBy('date', 'ESC')
+     // ->get();
+
          $bookings = Booking::orderBy('created_at','desc')->take(3)->get();
          $manicurebookings = Booking::ismanicure();
+      //    $pedicurebookings = DB::where('treatment','pedicure')
+      // ->join('treatment','date', '=', 'treatment.date')
+      // ->orderBy('treatment.date', 'DSC')
+      // ->get();
          $pedicurebookings = Booking::ispedicure();
          $haircutbookings = Booking::ishaircut();
 

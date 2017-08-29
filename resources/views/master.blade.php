@@ -36,7 +36,7 @@
      minDate: 1,
      maxDate: "+3M +10D",
      altField: "#datepicker",
-     altFormat: "d MM, yy",
+     altFormat: "yy-mm-d",
      beforeShowDay: $.datepicker.noWeekends
     });
   });
